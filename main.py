@@ -11,7 +11,7 @@ def sing_in(login, password,frame):
         return False
     elif Useres[login][0] == password:
         showinfo("Вход!", "Вы вошли")
-        frame.rispack()
+        frame.tkraise()
     else:
         showerror("Ошибка", "Пароль не верный!")
         return False
@@ -44,8 +44,7 @@ bt_show_password = Button(login_frame, text= "👁", width="2", command=lambda: 
 bt_Forget_pasword = Button(login_frame, text="Сменить пароль", width="20",command=lambda: forget_password(ent_login.get(), ent_password.get()))
 
 #замещение
-Nt.pack()
-login_frame.pack()
+Nt.pack();login_frame.pack()
 Main_frame.pack()
 lb1.grid(row=0, column=0)
 lb2.grid(row= 2, column=0)
