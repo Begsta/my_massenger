@@ -8,6 +8,7 @@ def sing_in(login,password):
         showinfo("Ошибка", "Вы не зарегистрированы")
     elif Useres[login][0] == password:
         showinfo("Вход!", "Вы вошли")
+
     else:
         showinfo("Ошибка", "Пароль не верный!")
 
@@ -43,6 +44,10 @@ def hash(password):
     for i in password:
         hash_password += ord(i)
     return hash_password
+
+# если забыл пароль, то это функция заменит его
+def forget_password(login, password):
+    Useres[login][0] = password
 
 #функция для регистрации пользования
 def registration(login, password):
